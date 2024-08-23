@@ -1,0 +1,19 @@
+@use '../util' as u;
+
+.footer {
+  background-color: var(--accurate);
+  margin-inline: auto;
+  text-align: center;
+
+  h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-size: clamp(2rem, 1.54rem + 1.93vw, 3rem);
+  }
+
+  &__logo {
+    width: u.rem(110);
+    margin-inline: auto;
+    text-align: center;
+  }
+}

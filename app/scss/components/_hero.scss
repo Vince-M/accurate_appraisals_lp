@@ -1,0 +1,97 @@
+@use '../util' as u;
+
+.feature-image {
+  background: url(../img/hero_accident_1920x750.jpg) no-repeat;
+  background-position-y: 0%;
+  background-size: auto; 
+  background-position: left top;
+  background-size: cover; 
+  left: 50%; 
+  padding: 0; 
+  position: relative;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%); 
+  margin-top: 0; 
+  margin-bottom: 0;
+  height: u.rem(550); 
+  overflow: hidden; 
+  clear: both;
+
+  @include u.breakpoint-down (medium) {
+    background-position: left top;
+  }
+
+  @include u.breakpoint-down (small) {
+    height: u.rem(500);
+    padding-top: u.rem(40);
+  }
+}
+
+.hero {
+  background-position: left top;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    // margin-bottom: u.rem(40);
+    display: flex;
+
+    @include u.breakpoint-down (small) {
+      // background: url(/img/hero_accident_mobile.jpg) no-repeat;
+      background-position: left top;
+      justify-content: flex-start;
+      padding-top: u.rem(100);
+    }
+
+  
+    &__logo {
+      margin-bottom: u.rem(60);
+  
+      // @include breakpoint-down (small) {
+      //   padding: 0 u.rem(20);
+      // }
+    }
+
+	&__callout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: u.rem(10);
+    padding: u.rem(20);
+    width: 30%;
+		background-color: var(--white60);
+
+    @include u.breakpoint-down (medium) {
+      width: 60%;
+    }
+
+    @include u.breakpoint-down (small) {
+      width: 90%;
+    }
+
+    h2 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-size: clamp(1.5rem, 1.04rem + 1.93vw, 2.5rem);
+      color: var(--primaryGreenDark);
+      margin-bottom: 0;
+    }
+
+    p {
+      font-size: u.rem(18);
+    }
+	}
+
+  &__headline {
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 65%;
+    z-index: 900;
+    width: 100%;
+    // height: 100vh;
+  }
+}

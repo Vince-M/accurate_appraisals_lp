@@ -1,0 +1,164 @@
+@use '../util' as u;
+
+.wrapper {
+	width: min(100% - u.rem(48), u.rem(1200));
+	margin-inline: auto;
+	padding-block: 20px;
+
+	@include u.breakpoint(large) {
+		padding-block: 60px;
+	}
+
+	&_brand {
+		padding-top: 0;
+	}
+
+	&__text {
+		max-width: u.rem(700);
+		width: u.rem(600);
+		margin-inline: auto;
+
+		@include u.breakpoint-down(small) {
+			width: 100%;
+		}
+
+		h2 {
+			font-family: var(--font-heading);
+			font-size: u.rem(28);
+			font-size: clamp(u.rem(28), u.rem(26.08) + 0.48vw, u.rem(32));
+			margin-bottom: u.rem(20);
+			line-height: u.rem(35.2);
+		}
+
+		h3 {
+			font-family: var(--font-heading);
+			font-size: u.rem(24);
+			margin-bottom: 0;
+		}
+	}
+
+	&__fullWidth {
+
+		&--section {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			width: 100%;
+			overflow: hidden;
+			position: relative;
+			justify-content: flex-start;
+			align-items: center;
+		}
+
+		&--row {
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+		}
+
+		&--image {
+			background-position: top;
+			background-repeat: no-repeat;
+			background-size: cover;
+			flex: 1;
+			height: 18.75rem;
+			width: 50%;
+		}
+
+		&--bkgImage {
+			background-image: url('../../img/car-body-photo.jpg');
+		}
+
+		&--vintage {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			height: u.rem(400);
+			overflow: hidden;
+		}
+
+		&--text {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+			padding-left: u.rem(20);
+		}
+
+		&--guarantee {
+			width: 50%;
+			padding: u.rem(20);
+
+			h2 {
+				font-family: var(--font-heading);
+				font-size: u.rem(48);
+				letter-spacing: -.5px;
+				line-height: 1.1;
+				text-align: left;
+				font-weight: 700;
+				color: var(--primaryGreenDark)
+			}
+
+			h3 {
+				font-family: var(--font-heading);
+				font-size: u.rem(32);
+				line-height: 1.1;
+				font-weight: 700;
+				color: var(--primaryGreenDark)
+			}
+		}
+	}
+
+}
+
+.sm-wrapper {
+	margin-inline: auto;
+  width: min(100% - 3rem,75rem);
+
+	h2 {
+			font-family: var(--font-heading);
+			font-size: u.rem(36);
+			letter-spacing: -.5px;
+			line-height: 1.1;
+			text-align: center;
+			font-weight: 700;
+			color: var(--primaryGreenDark);
+
+			@include u.breakpoint-down (medium) {
+				font-size: u.rem(26);
+				text-align: left;
+			}
+	}
+}
+
+.vintage-wrapper {
+
+	@include u.breakpoint-down (small) {
+		padding-block: 0;
+		margin-top: u.rem(20);
+	}
+}
+
+.separator-wrapper {
+	margin-inline: auto;
+  padding-block: 0;
+  width: min(100% - 3rem,75rem);
+}
+
+.fb-wrapper {
+	display: grid;
+	grid-template-columns: [fb-start] 1fr [content-start] min(100% - u.rem(48), u.rem(1200)) [content-end] 1fr [fb-end];
+
+	> * {
+		grid-row: 1 / 2;
+	}
+
+	&__full {
+		grid-column: fb-start / fb-end;
+		align-self: end;
+	}
+	&__content {
+		grid-column: content-start / content-end;
+	}
+}

@@ -1,0 +1,38 @@
+{
+  "name": "accurate_appraisals_lp",
+  "version": "1.0.0",
+  "description": "Accurate Appraisals landing page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vince-M/accurate_appraisals_lp.git"
+  },
+  "author": "Vince Mendella",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vince-M/accurate_appraisals_lp/issues"
+  },
+  "homepage": "https://github.com/Vince-M/accurate_appraisals_lp#readme",
+  "dependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.3",
+    "autoprefixer": "^10.4.20",
+    "browser-sync": "^3.0.2",
+    "cssnano": "^7.0.5",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-postcss": "^10.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-terser": "^2.1.0",
+    "postcss": "^8.4.41",
+    "sass": "^1.77.8"
+  },
+
+"overrides": {
+ "chokidar": "3.5.3",
+"glob-parent": "6.0.2"
+}
+}
