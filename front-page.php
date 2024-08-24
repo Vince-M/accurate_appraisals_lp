@@ -41,7 +41,7 @@
       <article class="wrapper">
         <div class="vintage_section">
           <div class="vintage_car">
-            <img src="img/vintage_car.jpg" alt="">
+            <img src="<?php echo get_theme_file_uri() ?>/img/vintage_car.jpg" alt="">
           </div>
           <div class="vintage_text">
             <h2>Need a Vintage or Collector car appraisal?</h2>
@@ -71,8 +71,12 @@
     <section>
       <h2 class="visually-hidden">Contact Form</h2>
       <aside>
-        <div class="wrapper contact">
-          <h2>Contact</h2>
+        <div class="wrapper wrapper__text contact">
+        <?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
+
+<?php the_content(); ?>
+
+<?php endwhile; endif; ?>
         </div>
         
       </aside>

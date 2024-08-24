@@ -28,7 +28,7 @@ function jsTask() {
 function browserSyncServe(cb) {
   browsersync.init({
     browser: 'firefox developer edition',
-    proxy: "http://0205024accuratelanding-page.local//",
+    proxy: "http://0205024accuratelanding-page.local/",
     notify: {
       styles: {
         top: 'auto',
