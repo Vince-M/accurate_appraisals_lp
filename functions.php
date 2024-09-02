@@ -27,16 +27,15 @@ function accurate_theme_menus() {
 add_action( 'init', 'accurate_theme_menus');
 
 
+function add_comment_to_body_open() {
+  printf( "<!-- THIS SHOULD RENDER AFTER THE BODY TAG OPENS --" );
+}
+add_action( 'wp_body_open', 'add_comment_to_body_open' );
 
-  function defer_parsing_of_js( $url ) {
+function defer_parsing_of_js( $url ) {
     if ( is_user_logged_in() ) return $url; //don't break WP Admin
     if ( FALSE === strpos( $url, '.js' ) ) return $url;
     if ( strpos( $url, 'jquery.js' ) ) return $url;
     return str_replace( ' src', ' defer src', $url );
-  }
-  add_filter( 'script_loader_tag', 'defer_parsing_of_js', 10 );
-
-  function add_comment_to_body_open() {
-    printf( "<!-- THIS SHOULD RENDER AFTER THE BODY TAG OPENS --" );
-    }
-    add_action( 'wp_body_open', 'add_comment_to_body_open' );
+}
+add_filter( 'script_loader_tag', 'defer_parsing_of_js', 10 );

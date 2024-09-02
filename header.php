@@ -11,8 +11,6 @@
 
   <title>Accurate Appraisals</title>
 
-  <script defer src="./dist/script.js"></script>
-
   <?php wp_head(); ?>
 
 </head>
