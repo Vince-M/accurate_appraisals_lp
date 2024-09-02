@@ -30,6 +30,20 @@ img {
 	height: auto;
 }
 
+.privacy {
+  color: var(--black);
+}
+
+.privacy:hover {
+	color: var(--white);
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: underline;
+}
+
 .header {
 	background-color: var(--accurate);
 	height: u.rem(100);
@@ -132,3 +146,14 @@ img {
 		border: 1px solid;
 	}
 }
+
+.wpforms-form button[type=submit] {
+	background-color: var(--primaryGreenMed) !important;   // #024488 !important
+	border-color: var(--primaryGreenMed) !important; //#024488 !important
+	color: #fff !important;
+	transition: background 0.3s ease-in-out;
+	}
+	 
+	.wpforms-form button[type=submit]:hover {
+	background-color: var(--primaryGreenDark) !important;  // #022B57 !important
+	}

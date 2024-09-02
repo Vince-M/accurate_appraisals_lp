@@ -1,2 +1,2 @@
-"use strict";console.log("Hello"),$(window).scroll((function(){$(this).scrollTop()>250?$("nav").addClass("sticky"):$("nav").removeClass("sticky")})),$(window).scroll((function(){$(this).scrollTop()>250?$(".navbar-brand").addClass("brandLogoShrink").removeClass("brandLogo"):$(".navbar-brand").addClass("brandLogo").removeClass("brandLogoShrink")}));
+"use strict";console.log("Hello");
 //# sourceMappingURL=script.js.map
